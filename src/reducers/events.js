@@ -1,7 +1,7 @@
 import _ from "lodash";
 import { READ_EVENTS } from "../actions";
 
-const Count = (events = {}, action) => {
+const Event = (events = {}, action) => {
     switch (action.type) {
         case READ_EVENTS:
             return _.mapKeys(action.response.data, "id");
@@ -10,4 +10,4 @@ const Count = (events = {}, action) => {
     }
 };
 
-export default Count;
+export default Event;
